@@ -32,5 +32,10 @@ class Realiable_BurgersTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    func testHamburgersICanStillEatTodayReturnsWithinRange() {
+        let counter = CalorieCounter()
+        XCTAssert(counter.hamburgersICanStillEatToday <= 4, "we should NOT recommend eating more than four hamburgers a day!")
+        XCTAssert(counter.hamburgersICanStillEatToday >= 0)
+    }
     
 }
